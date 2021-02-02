@@ -17,3 +17,10 @@ services:
   networks:
     segregate:
       ipv4_address: 192.168.200.18
+
+networks:
+  segregate:
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.200.16/28
