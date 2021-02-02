@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/my.crt:/etc/ssl/my.crt
+      - ./nginx/my.key:/etc/ssl/my.key
+    ports:
+      - "443:443"
+    networks:
+      segregate:
+        ipv4_address: 192.168.200.21
+

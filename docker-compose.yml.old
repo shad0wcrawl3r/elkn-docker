@@ -29,6 +29,9 @@ services:
     segregate:
       ipv4_address: 192.168.200.19
  
+
+
+ 
  logstash:
     image: logstash:7.9.1
     container_name: logstash
