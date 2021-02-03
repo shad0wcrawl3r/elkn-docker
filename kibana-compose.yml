@@ -3,8 +3,8 @@ services:
   kibana: 
     image: kibana:7.9.1
     container_name: kibana
-    # volumes:
-    #  -
+    volumes:
+     - ./kibana/kibana.yml
     ports:
      - "5601:5601"
     networks:
