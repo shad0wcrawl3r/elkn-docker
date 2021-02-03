@@ -4,7 +4,7 @@ services:
     image: kibana:7.9.1
     container_name: kibana
     volumes:
-     - ./kibana/kibana.yml
+     - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
      - "5601:5601"
     networks:
